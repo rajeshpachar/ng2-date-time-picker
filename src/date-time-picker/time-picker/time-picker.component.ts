@@ -28,7 +28,7 @@ export class TimePickerComponent implements OnInit {
     @Output() onSelectTime = new EventEmitter<any>();
     @Output() onTimePickerCancel = new EventEmitter<boolean>();
     hourFormat = 'HH';
-    private time: Moment;
+    public time: Moment;
 
     constructor() {
     }
