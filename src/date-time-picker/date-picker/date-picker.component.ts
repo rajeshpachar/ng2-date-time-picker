@@ -8,6 +8,7 @@ import { Moment } from 'moment/moment';
 
 // webpack1_
  declare let require: any;
+ require('./date-picker.component.scss');
 // const myDpStyles: string = require("./date-picker.component.scss");
 // const myDpTpl: string = require("./date-picker.component.html");
 // webpack2_

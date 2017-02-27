@@ -9,6 +9,7 @@ import {
 
 // webpack1_
  declare let require: any;
+ require('./modal.component.scss');
 // const myDpStyles: string = require("./modal.component.scss");
 // const myDpTpl: string = require("./modal.component.html");
 // webpack2_
