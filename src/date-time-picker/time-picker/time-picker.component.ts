@@ -2,7 +2,7 @@
  * time-picker.component
  */
 
-import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
+import { Component, OnInit, Input, Output, EventEmitter,ViewEncapsulation } from "@angular/core";
 import * as moment from 'moment/moment';
 import { Moment } from 'moment/moment';
 
@@ -16,6 +16,7 @@ import { Moment } from 'moment/moment';
     selector: 'time-picker',
     templateUrl: './time-picker.component.html',
     styleUrls: ['./time-picker.component.scss'],
+    encapsulation: ViewEncapsulation.None,
 })
 
 export class TimePickerComponent implements OnInit {

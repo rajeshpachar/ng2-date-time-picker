@@ -2,7 +2,7 @@
  * date-picker.component
  */
 
-import { Component, OnInit, Output, EventEmitter, Input } from "@angular/core";
+import { Component, OnInit, Output, EventEmitter, Input, ViewEncapsulation } from "@angular/core";
 import * as moment from 'moment/moment';
 import { Moment } from 'moment/moment';
 
@@ -16,6 +16,7 @@ import { Moment } from 'moment/moment';
     selector: 'date-picker',
     templateUrl: './date-picker.component.html',
     styleUrls: ['./date-picker.component.scss'],
+    encapsulation: ViewEncapsulation.None,
 })
 
 export class DatePickerComponent implements OnInit {
@@ -52,7 +53,7 @@ export class DatePickerComponent implements OnInit {
         this.generateCalendar();
     }
 
-    selectDay( day: Moment ): void {
+    selectDay(day: Moment): void {
         let daysDifference = day.diff(this.calendarDate.clone().startOf('date'), 'days');
         day = this.calendarDate.clone().add(daysDifference, 'd');
         let selectedDay = this.parseToReturnObjectType(day);
@@ -92,7 +93,7 @@ export class DatePickerComponent implements OnInit {
 
         // check if the input initDate has value
         if (this.initDate) {
-            this.calendarDate = this.returnObject === 'string'? moment(this.initDate, this.viewFormat):
+            this.calendarDate = this.returnObject === 'string' ? moment(this.initDate, this.viewFormat) :
                 moment(this.initDate);
             this.selectedDate = this.calendarDate.clone().startOf('date');
         } else {

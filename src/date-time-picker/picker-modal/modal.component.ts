@@ -4,7 +4,7 @@
 
 import {
     Component, Output, OnInit, EventEmitter, trigger, transition, style, state, animate,
-    ChangeDetectionStrategy
+    ChangeDetectionStrategy, ViewEncapsulation
 } from "@angular/core";
 
 // webpack1_
@@ -18,6 +18,7 @@ import {
     templateUrl: './modal.component.html',
     styleUrls: ['./modal.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
+    encapsulation: ViewEncapsulation.None,
     animations: [
         trigger('modalAnimation', [
             state('*',
