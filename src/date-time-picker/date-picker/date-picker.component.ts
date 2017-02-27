@@ -8,15 +8,15 @@ import { Moment } from 'moment/moment';
 
 // webpack1_
  declare let require: any;
- require('./date-picker.component.scss');
-// const myDpStyles: string = require("./date-picker.component.scss");
+// require('./date-picker.component.scss');
+ const myDpStyles: string = require("./date-picker.component.scss");
 // const myDpTpl: string = require("./date-picker.component.html");
 // webpack2_
 
 @Component({
     selector: 'date-picker',
     templateUrl: './date-picker.component.html',
-    styleUrls: [require('./date-picker.component.scss')],
+    styleUrls: [myDpStyles],
 })
 
 export class DatePickerComponent implements OnInit {

@@ -9,15 +9,15 @@ import {
 
 // webpack1_
  declare let require: any;
- require('./modal.component.scss');
-// const myDpStyles: string = require("./modal.component.scss");
+ //require('./modal.component.scss');
+ const myDpStyles: string = require("./modal.component.scss");
 // const myDpTpl: string = require("./modal.component.html");
 // webpack2_
 
 @Component({
     selector: 'picker-modal',
     templateUrl: './modal.component.html',
-    styleUrls: [require('./modal.component.scss')],
+    styleUrls: [myDpStyles],
     changeDetection: ChangeDetectionStrategy.OnPush,
     animations: [
         trigger('modalAnimation', [
