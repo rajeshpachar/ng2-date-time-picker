@@ -7,15 +7,15 @@ import * as moment from 'moment/moment';
 import { Moment } from 'moment/moment';
 
 // webpack1_
-declare let require: any;
-const myDpStyles: string = require("./time-picker.component.scss");
-const myDpTpl: string = require("./time-picker.component.html");
+// declare let require: any;
+// const myDpStyles: string = require("./time-picker.component.scss");
+// const myDpTpl: string = require("./time-picker.component.html");
 // webpack2_
 
 @Component({
     selector: 'time-picker',
-    template: myDpTpl,
-    styles: [myDpStyles],
+    templateUrl: './time-picker.component.html',
+    styleUrls: ['./time-picker.component.scss'],
 })
 
 export class TimePickerComponent implements OnInit {
