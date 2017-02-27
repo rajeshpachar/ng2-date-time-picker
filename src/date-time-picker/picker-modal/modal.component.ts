@@ -8,7 +8,7 @@ import {
 } from "@angular/core";
 
 // webpack1_
-// declare let require: any;
+ declare let require: any;
 // const myDpStyles: string = require("./modal.component.scss");
 // const myDpTpl: string = require("./modal.component.html");
 // webpack2_
@@ -16,7 +16,7 @@ import {
 @Component({
     selector: 'picker-modal',
     templateUrl: './modal.component.html',
-    styleUrls: ['./modal.component.scss'],
+    styleUrls: [require('./modal.component.scss')],
     changeDetection: ChangeDetectionStrategy.OnPush,
     animations: [
         trigger('modalAnimation', [

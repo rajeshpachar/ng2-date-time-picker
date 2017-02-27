@@ -7,7 +7,7 @@ import * as moment from 'moment/moment';
 import { Moment } from 'moment/moment';
 
 // webpack1_
-// declare let require: any;
+ declare let require: any;
 // const myDpStyles: string = require("./date-picker.component.scss");
 // const myDpTpl: string = require("./date-picker.component.html");
 // webpack2_
@@ -15,7 +15,7 @@ import { Moment } from 'moment/moment';
 @Component({
     selector: 'date-picker',
     templateUrl: './date-picker.component.html',
-    styleUrls: ['./date-picker.component.scss'],
+    styleUrls: [require('./date-picker.component.scss')],
 })
 
 export class DatePickerComponent implements OnInit {

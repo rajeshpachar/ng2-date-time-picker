@@ -2,20 +2,21 @@
  * time-picker.component
  */
 
-import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
+import { Component, OnInit, Input, Output, EventEmitter,ViewEncapsulation  } from "@angular/core";
 import * as moment from 'moment/moment';
 import { Moment } from 'moment/moment';
-
+ 
 // webpack1_
-// declare let require: any;
+ declare let require: any;
 // const myDpStyles: string = require("./time-picker.component.scss");
-// const myDpTpl: string = require("./time-picker.component.html");
+require('./time-picker.component.scss');
+ //const myDpTpl: string = require("./time-picker.component.html");
 // webpack2_
 
 @Component({
     selector: 'time-picker',
     templateUrl: './time-picker.component.html',
-    styleUrls: ['./time-picker.component.scss'],
+    styleUrls: [require('./time-picker.component.scss')],
 })
 
 export class TimePickerComponent implements OnInit {
